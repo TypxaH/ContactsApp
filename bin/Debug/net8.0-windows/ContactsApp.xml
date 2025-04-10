@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContactsApp</name>
+    </assembly>
+    <members>
+        <member name="F:ContactsApp.FormAddContact.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ContactsApp.FormAddContact.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ContactsApp.FormAddContact.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:ContactsApp.FormContacts.components">
+            <summary>
+             Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ContactsApp.FormContacts.Dispose(System.Boolean)">
+            <summary>
+             Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ContactsApp.FormContacts.InitializeComponent">
+            <summary>
+             Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ContactsApp.Services.ContactServices">
+            <summary>
+            Сервизен клас за управление на контактите в базата данни.
+            </summary>
+        </member>
+        <member name="M:ContactsApp.Services.ContactServices.AddNewContact(System.String,System.String)">
+            <summary>
+            Добавя нов контакт в базата данни.
+            </summary>
+            <param name="contactName">Името на контакта.</param>
+            <param name="contactPhone">Телефонният номер на контакта.</param>
+        </member>
+        <member name="M:ContactsApp.Services.ContactServices.LoadContactsFromDb">
+            <summary>
+            Зарежда всички контакти от базата данни.
+            </summary>
+            <returns>Списък с всички контакти.</returns>
+        </member>
+        <member name="T:ContactsApp.Services.Validator">
+            <summary>
+            Статичен клас за валидиране на данни, свързани с контактите.
+            </summary>
+        </member>
+        <member name="M:ContactsApp.Services.Validator.IsValidName(System.String,System.String@)">
+            <summary>
+            Проверява дали дадено име на контакт е валидно.
+            </summary>
+            <param name="contactName">Името на контакта за проверка.</param>
+            <param name="message">Съобщение за грешка или "ok", ако името е валидно.</param>
+            <returns>Връща <c>true</c>, ако името е валидно; в противен случай <c>false</c>.</returns>
+        </member>
+        <member name="M:ContactsApp.Services.Validator.IsValidNumber(System.String,System.String@)">
+            <summary>
+            Проверява дали даден телефонен номер е валиден.
+            </summary>
+            <param name="contactNumber">Телефонният номер за проверка.</param>
+            <param name="message">Съобщение за грешка или "ok", ако номерът е валиден.</param>
+            <returns>Връща <c>true</c>, ако номерът е валиден; в противен случай <c>false</c>.</returns>
+        </member>
+        <member name="M:ContactsApp.Services.Validator.IsOnlyDigits(System.String)">
+            <summary>
+            Проверява дали даден низ съдържа само цифри.
+            </summary>
+            <param name="contactNumber">Низът за проверка.</param>
+            <returns>Връща <c>true</c>, ако низът съдържа само цифри; в противен случай <c>false</c>.</returns>
+        </member>
+        <member name="M:ContactsApp.StartUp.Main">
+            <summary>
+             The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:ContactsApp.ApplicationConfiguration">
+            <summary>
+             Bootstrap the application configuration.
+            </summary>
+        </member>
+        <member name="M:ContactsApp.ApplicationConfiguration.Initialize">
+            <summary>
+             Bootstrap the application as follows:
+             <code>
+             global::System.Windows.Forms.Application.EnableVisualStyles();
+             global::System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+             global::System.Windows.Forms.Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            </code>
+            </summary>
+        </member>
+    </members>
+</doc>
